@@ -3,6 +3,7 @@ from app.routes import kpi
 from app.routes import forecast_analysis
 from app.routes import cost_suggestions
 from app.routes import risk_detection
+from app.routers import risk_alert
 
 
 from app.routes import (
@@ -12,6 +13,14 @@ from app.routes import (
     executive_brief,
     risk_alert
 )
+from app.routers import revenue
+from app.routers import expense
+from app.routers import budget
+from app.routers import payment
+from app.routers import finance
+from app.routers import reports
+from app.routers import auth
+from app.routers import risk_alert
 
 app = FastAPI(title="InsightIQ AI")
 
@@ -68,3 +77,12 @@ app.include_router(
     prefix="/risk-detection",
     tags=["Risk Detection"]
 )
+app.include_router(risk_alert.router)
+app.include_router(revenue.router)
+app.include_router(expense.router)
+app.include_router(budget.router)
+app.include_router(payment.router)
+app.include_router(finance.router)
+app.include_router(reports.router)
+app.include_router(auth.router)
+app.include_router(risk_alert.router)

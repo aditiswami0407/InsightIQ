@@ -8,8 +8,7 @@ from app.schemas.risk_detection_response import (
     RiskDetectionResponse
 )
 
-from app.services.risk_service import detect_risk
-
+from app.services.risk_service import risk_analysis
 router = APIRouter()
 
 
@@ -21,4 +20,4 @@ def risk_detection(
     request: RiskDetectionRequest
 ):
 
-    return detect_risk(request)
+    return risk_analysis(request)

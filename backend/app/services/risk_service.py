@@ -1,4 +1,4 @@
-def detect_risk(data):
+def risk_analysis(data):
 
     if (
         data.revenue_growth < 0 and
@@ -7,10 +7,7 @@ def detect_risk(data):
     ):
         return {
             "risk_level": "HIGH",
-            "risk_reason": (
-                "Revenue and profit are declining "
-                "while expenses are increasing."
-            )
+            "risk_reason": "Revenue and profit are declining while expenses are increasing."
         }
 
     elif (
@@ -19,15 +16,10 @@ def detect_risk(data):
     ):
         return {
             "risk_level": "MEDIUM",
-            "risk_reason": (
-                "Business growth indicators "
-                "show signs of decline."
-            )
+            "risk_reason": "Business growth indicators show signs of decline."
         }
 
     return {
         "risk_level": "LOW",
-        "risk_reason": (
-            "Business performance appears stable."
-        )
+        "risk_reason": "Business performance appears stable."
     }
