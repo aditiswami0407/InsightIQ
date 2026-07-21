@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from app.routes import kpi
 from app.routes import forecast_analysis
 from app.routes import cost_suggestions
-from app.routes import risk_detection
+# from app.routes import risk_detection
 from app.routers import risk_alert
 
 
