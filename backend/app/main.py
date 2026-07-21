@@ -14,7 +14,11 @@ from app.models.budget import Budget
 from app.routers import revenue
 from app.routers import expense
 from app.routers import budget
+from app.routers import payment
 from app.routers import finance
+from app.routers import reports
+from app.routers import auth
+
 
 
 
@@ -31,7 +35,11 @@ app = FastAPI(
 app.include_router(revenue.router)
 app.include_router(expense.router)
 app.include_router(budget.router)
+app.include_router(payment.router)
 app.include_router(finance.router)
+app.include_router(reports.router)
+app.include_router(auth.router)
+
 
 
 @app.get("/")
