@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
-
-class RiskDetectionRequest(BaseModel):
+class RiskDetection(BaseModel):
     revenue_growth: float
     profit_growth: float
     expense_growth: float
+ 
