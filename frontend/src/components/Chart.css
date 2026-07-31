@@ -1,0 +1,231 @@
+.chart-card {
+
+  margin-top:35px;
+
+
+  background:
+
+  rgba(255,255,255,0.15);
+
+
+  backdrop-filter:
+
+  blur(20px);
+
+
+  border-radius:25px;
+
+
+  padding:30px;
+
+
+  border:
+
+  1px solid rgba(255,255,255,.25);
+
+
+  box-shadow:
+
+  0 20px 40px rgba(0,0,0,.25);
+
+
+}
+
+
+
+/* Header */
+
+
+.chart-header {
+
+
+  display:flex;
+
+
+  justify-content:space-between;
+
+
+  align-items:center;
+
+
+  margin-bottom:25px;
+
+
+}
+
+
+
+.chart-header h2 {
+
+
+  margin:0;
+
+
+  color:white;
+
+
+  font-size:25px;
+
+
+}
+
+
+
+.chart-header p {
+
+
+  margin-top:8px;
+
+
+  color:#e2e8f0;
+
+
+}
+
+
+
+
+/* Button */
+
+
+.chart-btn {
+
+
+  border:none;
+
+
+  padding:12px 20px;
+
+
+  border-radius:15px;
+
+
+  background:
+
+
+  rgba(255,255,255,.25);
+
+
+  color:white;
+
+
+  font-weight:600;
+
+
+  cursor:pointer;
+
+
+  transition:.3s;
+
+
+}
+
+
+
+.chart-btn:hover {
+
+
+  background:
+
+  rgba(255,255,255,.4);
+
+
+  transform:translateY(-3px);
+
+
+}
+
+
+
+
+/* Recharts */
+
+
+.recharts-cartesian-grid line {
+
+
+  stroke:
+
+  rgba(255,255,255,.2);
+
+
+}
+
+
+
+.recharts-text {
+
+
+  fill:
+
+  #e2e8f0;
+
+
+}
+
+
+
+.recharts-tooltip-wrapper {
+
+
+  outline:none;
+
+
+}
+
+
+
+.recharts-default-tooltip {
+
+
+  background:
+
+  rgba(15,23,42,.9)
+
+  !important;
+
+
+  border:none
+
+  !important;
+
+
+  border-radius:12px;
+
+
+  color:white;
+
+
+}
+
+
+
+@media(max-width:768px){
+
+
+.chart-card{
+
+
+padding:20px;
+
+
+}
+
+
+
+.chart-header{
+
+
+flex-direction:column;
+
+
+align-items:flex-start;
+
+
+gap:15px;
+
+
+}
+
+
+}

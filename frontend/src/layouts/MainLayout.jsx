@@ -1,18 +1,15 @@
-import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
+import "./MainLayout.css";
 
 function MainLayout({ children }) {
   return (
-    <div style={{ display: "flex" }}>
-      
-      <Sidebar />
+    <div className="layout">
 
-      <div style={{ flex: 1 }}>
-        <Navbar />
-        <div style={{ padding: "20px" }}>
-          {children}
-        </div>
-      </div>
+      <Navbar />
+
+      <main className="page-content">
+        {children}
+      </main>
 
     </div>
   );

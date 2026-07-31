@@ -1,50 +1,149 @@
 .sidebar {
-  width: 240px;
-  height: 100vh;
-  background: linear-gradient(180deg, #0f172a, #1e293b);
+  width: 260px;
+  min-height: 100vh;
+  background: #0f172a;
   color: white;
-  padding: 20px;
+  padding: 25px 20px;
+  position: sticky;
+  top: 0;
+  transition: all 0.3s ease;
 }
 
-.sidebar h2 {
-  margin-bottom: 30px;
+.logo {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.sidebar ul {
+.logo h2 {
+  color: #3b82f6;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.menu {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.sidebar li {
-  margin: 15px 0;
+.menu li {
+  margin-bottom: 10px;
 }
 
-.sidebar a {
-  color: #cbd5f5;
+.menu li a {
   text-decoration: none;
-  font-size: 15px;
-  transition: 0.3s;
-}
-
-.sidebar a:hover {
-  color: #38bdf8;
-  padding-left: 5px;
-}
-
-/* Logout button 🔥 */
-.logout-btn {
-  margin-top: 40px;
-  padding: 12px;
-  width: 100%;
-  background: linear-gradient(135deg, #ef4444, #dc2626);
-  border: none;
   color: white;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 14px 18px;
+  border-radius: 12px;
   transition: 0.3s;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-.logout-btn:hover {
-  transform: scale(1.05);
+.menu li a:hover {
+  background: #1e293b;
+  transform: translateX(5px);
+}
+
+.menu li.active a {
+  background: #2563eb;
+}
+
+.menu svg {
+  font-size: 18px;
+}
+
+/* Laptop */
+
+@media (max-width:1200px){
+
+.sidebar{
+    width:230px;
+}
+
+.logo h2{
+    font-size:26px;
+}
+
+.menu li a{
+    font-size:15px;
+}
+
+}
+
+/* Tablet */
+
+@media (max-width:992px){
+
+.sidebar{
+    width:210px;
+    padding:20px 15px;
+}
+
+.logo h2{
+    font-size:24px;
+}
+
+.menu li a{
+    padding:12px;
+    font-size:15px;
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.sidebar{
+    width:100%;
+    min-height:auto;
+    position:relative;
+    padding:15px;
+}
+
+.logo{
+    margin-bottom:20px;
+}
+
+.logo h2{
+    font-size:24px;
+}
+
+.menu{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.menu li{
+    margin:0;
+}
+
+.menu li a{
+    padding:10px 14px;
+    font-size:14px;
+}
+
+}
+
+/* Small Mobile */
+
+@media (max-width:480px){
+
+.logo h2{
+    font-size:20px;
+}
+
+.menu{
+    flex-direction:column;
+}
+
+.menu li a{
+    justify-content:center;
+}
+
 }

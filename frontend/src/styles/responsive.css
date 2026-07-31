@@ -1,0 +1,100 @@
+/* ===========================
+   Large Desktop (1400px+)
+=========================== */
+
+@media (min-width: 1400px) {
+
+    .page-container{
+        max-width:1400px;
+        margin:auto;
+    }
+
+}
+
+/* ===========================
+   Laptop
+=========================== */
+
+@media (max-width:1200px){
+
+    .cards,
+    .revenue-cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:992px){
+
+    .cards,
+    .revenue-cards,
+    .quick-stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .dashboard-bottom{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ===========================
+   Small Tablet
+=========================== */
+
+@media(max-width:768px){
+
+    .page-container{
+        padding:20px;
+    }
+
+    .dashboard-header,
+    .revenue-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .cards,
+    .revenue-cards,
+    .quick-stats{
+        grid-template-columns:1fr;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:576px){
+
+    h1{
+        font-size:26px;
+    }
+
+    h2{
+        font-size:22px;
+    }
+
+    .page-container{
+        padding:15px;
+    }
+
+    .download-btn,
+    .logout-btn{
+        width:100%;
+        justify-content:center;
+    }
+
+}

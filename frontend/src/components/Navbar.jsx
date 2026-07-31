@@ -1,32 +1,126 @@
-import React from "react";
+import { NavLink } from "react-router-dom";
+import {
+  FaSearch,
+  FaBell,
+  FaUserCircle,
+} from "react-icons/fa";
+
+import "./Navbar.css";
 
 function Navbar() {
-  return (
-    <div
-      style={{
-        padding: "15px 20px",
-        backgroundColor: "#111827", // dark navy
-        color: "#ffffff",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        boxShadow: "0 2px 5px rgba(0,0,0,0.2)"
-      }}
-    >
-      {/* Left Side - Title */}
-      <h2 style={{ margin: 0, fontSize: "20px" }}>
-        InsightIQ Dashboard
-      </h2>
 
-      {/* Right Side - Optional (future use) */}
-      <div style={{ display: "flex", alignItems: "center", gap: "15px" }}>
-        {/* Future: profile icon / notifications */}
-        <span style={{ fontSize: "14px", opacity: 0.8 }}>
-          Welcome, User 👋
-        </span>
+  const user =
+    JSON.parse(localStorage.getItem("user")) || {};
+
+  return (
+
+    <header className="navbar">
+
+      {/* LEFT */}
+
+      <div className="navbar-left">
+
+        <div className="logo">
+
+          <div className="logo-icon">
+            ✨
+          </div>
+
+          <div className="logo-text">
+
+            <h2>InsightIQ</h2>
+
+            <span>
+              AI Executive Analytics
+            </span>
+
+          </div>
+
+        </div>
+
       </div>
-    </div>
+
+      {/* CENTER */}
+
+      <nav className="navbar-center">
+
+        <NavLink to="/dashboard">
+          Dashboard
+        </NavLink>
+
+        <NavLink to="/revenue">
+          Revenue
+        </NavLink>
+
+        <NavLink to="/expense">
+          Expense
+        </NavLink>
+
+        <NavLink to="/profit">
+          Profit
+        </NavLink>
+
+        <NavLink to="/kpi">
+          KPI
+        </NavLink>
+
+        <NavLink to="/reports">
+          Reports
+        </NavLink>
+
+        <NavLink to="/aiadvisor">
+          AI Advisor
+        </NavLink>
+
+      </nav>
+
+      {/* RIGHT */}
+
+      <div className="navbar-right">
+
+        <div className="search-box">
+
+          <FaSearch />
+
+          <input
+            type="text"
+            placeholder="Search..."
+          />
+
+        </div>
+
+        <div className="notification">
+
+          <FaBell />
+
+          <span>3</span>
+
+        </div>
+
+        <div className="profile">
+
+          <FaUserCircle className="profile-icon" />
+
+          <div className="profile-info">
+
+            <h4>
+              {user.username || user.name || "User"}
+            </h4>
+
+            <p>
+              {user.role || "Frontend"}
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </header>
+
   );
+
 }
 
 export default Navbar;

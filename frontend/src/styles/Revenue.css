@@ -1,0 +1,689 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ===================================
+   PAGE
+=================================== */
+
+.revenue{
+
+    width:100%;
+    min-height:100vh;
+
+    padding:120px 35px 40px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #312e81 0%,
+        #5b21b6 45%,
+        #831843 100%
+    );
+
+    color:white;
+}
+
+/* ===================================
+   HEADER
+=================================== */
+
+.revenue-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:40px;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.revenue-header h1{
+
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:10px;
+
+}
+
+.revenue-header p{
+
+    color:#dbeafe;
+    font-size:17px;
+
+}
+
+.download-btn{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:14px 26px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    transition:.35s;
+
+}
+
+.download-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.35);
+
+}
+
+/* ===================================
+   CARDS
+=================================== */
+
+.revenue-cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.revenue-card{
+
+    background:
+    rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border:
+    1px solid rgba(255,255,255,.15);
+
+    border-radius:22px;
+
+    padding:28px;
+
+    transition:.35s;
+
+    box-shadow:
+    0 18px 35px rgba(0,0,0,.18);
+
+}
+
+.revenue-card:hover{
+
+    transform:
+    translateY(-8px);
+
+}
+
+.card-icon{
+
+    width:70px;
+    height:70px;
+
+    border-radius:18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+}
+
+.blue{
+
+    background:#2563eb;
+    color:white;
+
+}
+
+.green{
+
+    background:#22c55e;
+    color:white;
+
+}
+
+.orange{
+
+    background:#f59e0b;
+    color:white;
+
+}
+
+.purple{
+
+    background:#8b5cf6;
+    color:white;
+
+}
+
+.revenue-card h3{
+
+    color:#cbd5e1;
+
+    margin-bottom:12px;
+
+}
+
+.revenue-card h2{
+
+    font-size:34px;
+
+    margin-bottom:12px;
+
+}
+
+.revenue-card span{
+
+    color:#86efac;
+
+    font-weight:600;
+
+}
+
+/* ===================================
+   OVERVIEW
+=================================== */
+
+.overview-section{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.overview-card{
+
+    background:
+    rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:22px;
+
+    border:
+    1px solid rgba(255,255,255,.15);
+
+    padding:28px;
+
+}
+
+.overview-card h2{
+
+    margin-bottom:18px;
+
+}
+
+.overview-card p{
+
+    color:#dbeafe;
+
+    line-height:1.8;
+
+}
+
+/* ===================================
+   PROGRESS
+=================================== */
+
+.progress-group{
+
+    margin-top:28px;
+
+}
+
+.progress-group label{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:10px;
+
+}
+
+.progress{
+
+    height:12px;
+
+    background:
+    rgba(255,255,255,.15);
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+}
+
+.progress-fill{
+
+    height:100%;
+
+    border-radius:10px;
+
+    transition:1s;
+
+}
+
+.blue-fill{
+
+    width:85%;
+
+    background:
+    linear-gradient(
+        90deg,
+        #3b82f6,
+        #60a5fa
+    );
+
+}
+
+.green-fill{
+
+    width:72%;
+
+    background:
+    linear-gradient(
+        90deg,
+        #22c55e,
+        #4ade80
+    );
+
+}
+
+.client-list{
+
+    list-style:none;
+
+    margin-top:20px;
+
+}
+
+.client-list li{
+
+    padding:15px 0;
+
+    border-bottom:
+    1px solid rgba(255,255,255,.12);
+
+    color:#f8fafc;
+
+}
+
+.client-list li:last-child{
+
+    border:none;
+
+}
+/* ===================================
+   TABLE SECTION
+=================================== */
+
+.table-card{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.20);
+
+    overflow-x:auto;
+
+}
+
+.table-card h2{
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+    color:white;
+
+}
+
+.table-card table{
+
+    width:100%;
+
+    border-collapse:separate;
+
+    border-spacing:0 15px;
+
+}
+
+/* Table Header */
+
+.table-card thead tr{
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+}
+
+.table-card th{
+
+    padding:18px 22px;
+
+    text-align:left;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:700;
+
+}
+
+.table-card th:first-child{
+
+    border-radius:14px 0 0 14px;
+
+}
+
+.table-card th:last-child{
+
+    border-radius:0 14px 14px 0;
+
+}
+
+/* Table Body */
+
+.table-card tbody tr{
+
+    background:rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.table-card tbody tr:hover{
+
+    transform:translateY(-4px);
+
+    background:rgba(255,255,255,.18);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.20);
+
+}
+
+.table-card td{
+
+    padding:20px 22px;
+
+    color:white;
+
+    font-size:15px;
+
+    background:transparent;
+
+}
+
+.table-card td:first-child{
+
+    border-radius:14px 0 0 14px;
+
+    font-weight:600;
+
+}
+
+.table-card td:last-child{
+
+    border-radius:0 14px 14px 0;
+
+    color:#4ade80;
+
+    font-weight:700;
+
+}
+
+/* ===================================
+   CARD ANIMATIONS
+=================================== */
+
+.revenue-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.revenue-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-80px;
+
+    left:-80px;
+
+    width:160px;
+
+    height:160px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    transition:.6s;
+
+}
+
+.revenue-card:hover::before{
+
+    transform:scale(1.6);
+
+}
+
+.revenue-card:hover{
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.25);
+
+}
+
+/* ===================================
+   SCROLLBAR
+=================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+    height:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#1e1b4b;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#6366f1;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#818cf8;
+
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media(max-width:1200px){
+
+.revenue-header h1{
+
+font-size:36px;
+
+}
+
+.overview-section{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:992px){
+
+.revenue{
+
+padding:110px 25px 30px;
+
+}
+
+.revenue-cards{
+
+grid-template-columns:
+repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.revenue{
+
+padding:100px 18px 25px;
+
+}
+
+.revenue-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.download-btn{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.revenue-cards{
+
+grid-template-columns:1fr;
+
+}
+
+.overview-card{
+
+padding:22px;
+
+}
+
+.table-card{
+
+padding:20px;
+
+}
+
+.table-card th,
+.table-card td{
+
+padding:14px;
+
+font-size:14px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.revenue{
+
+padding:95px 15px 20px;
+
+}
+
+.revenue-header h1{
+
+font-size:28px;
+
+}
+
+.revenue-header p{
+
+font-size:15px;
+
+}
+
+.revenue-card h2{
+
+font-size:28px;
+
+}
+
+.table-card h2{
+
+font-size:22px;
+
+}
+
+}

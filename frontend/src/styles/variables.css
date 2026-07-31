@@ -1,0 +1,54 @@
+:root {
+
+  /* ===== Brand Colors ===== */
+
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+
+  --secondary: #7c3aed;
+
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+
+  --info: #06b6d4;
+
+  /* ===== Background ===== */
+
+  --bg: #f5f7fb;
+  --card-bg: #ffffff;
+
+  /* ===== Text ===== */
+
+  --text: #1e293b;
+  --text-light: #64748b;
+
+  /* ===== Border ===== */
+
+  --border: #e2e8f0;
+
+  /* ===== Shadows ===== */
+
+  --shadow-sm: 0 5px 12px rgba(0,0,0,.05);
+  --shadow-md: 0 10px 25px rgba(0,0,0,.08);
+  --shadow-lg: 0 18px 40px rgba(0,0,0,.12);
+
+  /* ===== Radius ===== */
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+
+  /* ===== Spacing ===== */
+
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 30px;
+  --space-xl: 40px;
+
+  /* ===== Fonts ===== */
+
+  --font-family: "Poppins", sans-serif;
+
+}

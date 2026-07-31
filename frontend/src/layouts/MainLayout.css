@@ -1,0 +1,75 @@
+.layout{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#f8fafc;
+
+}
+
+/* Space for fixed navbar */
+
+.page-content{
+
+    flex:1;
+
+    width:100%;
+
+    padding-top:80px;
+
+    box-sizing:border-box;
+
+}
+
+/* Large Laptop */
+
+@media (max-width:1200px){
+
+.page-content{
+
+    padding-top:75px;
+
+}
+
+}
+
+/* Tablet */
+
+@media (max-width:992px){
+
+.page-content{
+
+    padding-top:70px;
+
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.page-content{
+
+    padding-top:65px;
+
+}
+
+}
+
+/* Small Mobile */
+
+@media (max-width:480px){
+
+.page-content{
+
+    padding-top:60px;
+
+}
+
+}

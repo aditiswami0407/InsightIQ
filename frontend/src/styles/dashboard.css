@@ -1,0 +1,401 @@
+*{
+    box-sizing:border-box;
+}
+
+/* ===========================
+   DASHBOARD
+=========================== */
+
+.dashboard{
+
+    width:100%;
+
+    min-height:100vh;
+
+    padding:110px 40px 40px;
+
+    background:linear-gradient(
+        135deg,
+        #312e81,
+        #831843
+    );
+
+    color:white;
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.dashboard-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:35px;
+
+    flex-wrap:wrap;
+
+}
+
+.dashboard-header h1{
+
+    margin:0;
+
+    font-size:38px;
+
+}
+
+.dashboard-header p{
+
+    margin-top:8px;
+
+    color:#e2e8f0;
+
+    font-size:17px;
+
+}
+
+/* ===========================
+   HEADER ACTIONS
+=========================== */
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.date-box{
+
+    padding:18px 25px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+}
+
+.date-box h3{
+
+    margin:0;
+
+}
+
+.date-box span{
+
+    color:#e2e8f0;
+
+}
+
+/* ===========================
+   LOGOUT
+=========================== */
+
+.logout-btn{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:12px 24px;
+
+    border-radius:15px;
+
+    color:white;
+
+    font-weight:600;
+
+    background:linear-gradient(
+        135deg,
+        #ef4444,
+        #dc2626
+    );
+
+    transition:.3s;
+
+}
+
+.logout-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+/* ===========================
+   QUICK STATS
+=========================== */
+
+.quick-stats{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+    margin-top:35px;
+
+}
+
+.stat-card{
+
+    padding:25px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    transition:.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.stat-card h2{
+
+    margin:15px 0;
+
+    font-size:34px;
+
+}
+
+.stat-card p{
+
+    color:#86efac;
+
+}
+
+/* ===========================
+   BOTTOM SECTION
+=========================== */
+
+.dashboard-bottom{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:25px;
+
+    margin-top:35px;
+
+}
+
+.activity-box,
+.notification-box{
+
+    padding:25px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+}
+
+.activity-box ul,
+.notification-box ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.activity-box li,
+.notification-box li{
+
+    padding:14px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+
+}
+
+.activity-box li:last-child,
+.notification-box li:last-child{
+
+    border-bottom:none;
+
+}
+
+/* ===========================
+   LARGE SCREEN
+=========================== */
+
+@media(max-width:1400px){
+
+.dashboard{
+
+padding:110px 30px 30px;
+
+}
+
+}
+
+/* ===========================
+   LAPTOP
+=========================== */
+
+@media(max-width:1200px){
+
+.dashboard{
+
+padding:100px 25px 25px;
+
+}
+
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media(max-width:992px){
+
+.dashboard-bottom{
+
+grid-template-columns:1fr;
+
+}
+
+.header-actions{
+
+width:100%;
+
+justify-content:space-between;
+
+}
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.dashboard{
+
+padding:95px 18px 25px;
+
+}
+
+.dashboard-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.dashboard-header h1{
+
+font-size:30px;
+
+}
+
+.header-actions{
+
+width:100%;
+
+flex-direction:column;
+
+align-items:stretch;
+
+}
+
+.date-box{
+
+width:100%;
+
+}
+
+.logout-btn{
+
+width:100%;
+
+}
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media(max-width:480px){
+
+.dashboard{
+
+padding:90px 15px 20px;
+
+}
+
+.dashboard-header h1{
+
+font-size:26px;
+
+}
+
+.dashboard-header p{
+
+font-size:15px;
+
+}
+
+.stat-card h2{
+
+font-size:28px;
+
+}
+
+}
