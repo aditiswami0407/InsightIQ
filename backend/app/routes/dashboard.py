@@ -1,66 +1,62 @@
+from fastapi import APIRouter
 from sqlalchemy import func
 
 from app.database import SessionLocal
 from app.models.revenue import Revenue
 from app.models.expense import Expense
+from app.models.employee import Employee
+from app.models.client import Client
 
-from app.services.llm_service import ask_ai
+router = APIRouter()
 
 
-def generate_brief():
+@router.get("/summary")
+def dashboard_summary():
 
     db = SessionLocal()
 
     try:
-        # Get total revenue
+        # Total Revenue
         total_revenue = (
             db.query(func.coalesce(func.sum(Revenue.amount), 0))
             .scalar()
         )
 
-        # Get total expenses
+        # Total Expenses
         total_expenses = (
             db.query(func.coalesce(func.sum(Expense.amount), 0))
             .scalar()
         )
 
-        # Calculate profit
+        # Profit
         profit = total_revenue - total_expenses
 
-        # Calculate profit margin
+        # Profit Margin
         if total_revenue > 0:
             profit_margin = (profit / total_revenue) * 100
         else:
             profit_margin = 0
 
-        prompt = f"""
-You are an AI executive business advisor for InsightIQ.
+        # Employee Count
+        employees = (
+            db.query(func.count(Employee.id))
+            .filter(Employee.status == "Active")
+            .scalar()
+        )
 
-Analyze the following company financial data:
-
-Total Revenue: {total_revenue:.2f}
-Total Expenses: {total_expenses:.2f}
-Profit: {profit:.2f}
-Profit Margin: {profit_margin:.2f}%
-
-Create a short executive summary for company management.
-
-Include:
-1. Overall financial situation
-2. Whether profitability looks healthy
-3. One or two recommended actions
-
-Keep the response concise and professional.
-"""
-
-        ai_summary = ask_ai(prompt)
+        # Client Count
+        clients = (
+    db.query(func.count(Client.id))
+    .scalar()
+)
 
         return {
             "total_revenue": round(total_revenue, 2),
             "total_expenses": round(total_expenses, 2),
             "profit": round(profit, 2),
             "profit_margin": round(profit_margin, 2),
-            "summary": ai_summary
+            "employees": employees,
+            "clients": clients
         }
 
     finally:

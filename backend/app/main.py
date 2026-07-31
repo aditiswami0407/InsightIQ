@@ -17,12 +17,14 @@ from app.models.attendance import Attendance
 from app.models.leave import Leave
 from app.models.salary import Salary
 
+
 # Create Database Tables
 Base.metadata.create_all(bind=engine)
 
 # ==========================
 # AI Routes (app/routes)
 # ==========================
+from app.routes import dashboard
 from app.routes import (
     business_health,
     forecasting,
@@ -120,6 +122,12 @@ app.include_router(
     risk_detection.router,
     prefix="/risk-detection",
     tags=["Risk Detection"]
+)
+
+app.include_router(
+    dashboard.router,
+    prefix="/dashboard",
+    tags=["Dashboard"]
 )
 
 # ==========================
