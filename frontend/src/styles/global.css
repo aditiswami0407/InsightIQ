@@ -71,7 +71,14 @@ textarea:focus{
 
 /* Cards */
 
-.card{
+/* .card{
+    background:var(--card-bg);
+    border-radius:var(--radius-md);
+    box-shadow:var(--shadow-md);
+    padding:24px;
+} */
+
+.global-card{
     background:var(--card-bg);
     border-radius:var(--radius-md);
     box-shadow:var(--shadow-md);

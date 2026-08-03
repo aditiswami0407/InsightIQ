@@ -4,8 +4,10 @@ import Card from "../components/Card";
 import Chart from "../components/Chart";
 import "../styles/Dashboard.css";
 
+
+
 import {
-  FaDollarSign,
+  FaRupeeSign,
   FaChartLine,
   FaWallet,
   FaUsers,
@@ -78,7 +80,7 @@ function Dashboard() {
             title="Revenue"
             value="₹85,000"
             change="+12.5%"
-            icon={<FaDollarSign />}
+            icon={<FaRupeeSign />}
             color="#3B82F6"
           />
 

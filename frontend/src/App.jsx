@@ -8,6 +8,8 @@ import Expense from "./pages/Expense";
 import Profit from "./pages/Profit";
 import Reports from "./pages/Reports";
 import KPI from "./pages/KPI";
+import Products from "./pages/Products";
+import ProductDetails from "./pages/ProductDetails";
 import AIAdvisor from "./pages/AIAdvisor";
 import Notifications from "./pages/Notifications";
 import Profile from "./pages/Profile";
@@ -17,11 +19,13 @@ function App() {
   const token = localStorage.getItem("token");
 
   return (
+
     <BrowserRouter>
 
       <Routes>
 
         {/* Login */}
+
         <Route
           path="/login"
           element={<Login />}
@@ -55,13 +59,23 @@ function App() {
         />
 
         <Route
-          path="/reports"
-          element={token ? <Reports /> : <Navigate to="/login" />}
+          path="/kpi"
+          element={token ? <KPI /> : <Navigate to="/login" />}
         />
 
         <Route
-          path="/kpi"
-          element={token ? <KPI /> : <Navigate to="/login" />}
+          path="/products"
+          element={token ? <Products /> : <Navigate to="/login" />}
+        />
+
+        <Route
+          path="/products/:id"
+          element={token ? <ProductDetails /> : <Navigate to="/login" />}
+        />
+
+        <Route
+          path="/reports"
+          element={token ? <Reports /> : <Navigate to="/login" />}
         />
 
         <Route
@@ -89,7 +103,9 @@ function App() {
       </Routes>
 
     </BrowserRouter>
+
   );
+
 }
 
 export default App;

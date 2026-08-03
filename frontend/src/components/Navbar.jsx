@@ -64,6 +64,10 @@ function Navbar() {
           KPI
         </NavLink>
 
+        <NavLink to="/products">
+          Products
+        </NavLink>
+
         <NavLink to="/reports">
           Reports
         </NavLink>
